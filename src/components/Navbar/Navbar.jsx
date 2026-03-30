@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { CiShoppingCart, CiMenuFries } from 'react-icons/ci';
 import { IoClose } from 'react-icons/io5';
 
-const Navbar = () => {
+const Navbar = ({ cartCount }) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
@@ -19,7 +19,13 @@ const Navbar = () => {
                 </ul>
 
                 <div className='hidden md:flex justify-between items-center gap-4'>
-                    <CiShoppingCart size={24} />
+                    <div className='relative'>
+                        <CiShoppingCart size={24} />
+                        <span className='absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center'>
+                            {cartCount}
+                        </span>
+                    </div>
+
                     <p className='font-semibold'>
                         <a href="#" className='hover:text-[#4F39F6] transition-colors duration-300'>Login</a>
                     </p>
@@ -45,7 +51,12 @@ const Navbar = () => {
                     <a href="#" className='hover:text-[#4F39F6] transition-colors duration-300'>FAQ</a>
 
                     <div className='flex items-center gap-3 pt-2'>
-                        <CiShoppingCart size={24} />
+                        <div className='relative'>
+                            <CiShoppingCart size={24} />
+                            <span className='absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center'>
+                                {cartCount}
+                            </span>
+                        </div>
                         <a href="#" className='hover:text-[#4F39F6] transition-colors duration-300'>Login</a>
                     </div>
 

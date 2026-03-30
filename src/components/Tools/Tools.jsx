@@ -1,15 +1,19 @@
 import React, { use, useState } from 'react';
 import Products from '../Products/Products';
 import Cart from '../Cart/Cart';
+import { toast } from 'react-toastify';
 
-const Tools = ({ productsPromise }) => {
+const Tools = ({ productsPromise, selectedCart, setSelectedCart }) => {
     const data = use(productsPromise);
-
     const [selected, setSelected] = useState("products");
-    const [selectedCart, setSelectedCart] = useState([]);
 
     const handleAddToCart = (product) => {
-        setSelectedCart(prev => prev.some(item => item.id === product.id) ? prev : [...prev, product]);
+        const alreadyExists = selectedCart.some(item => item.id === product.id);
+
+        if (!alreadyExists) {
+            setSelectedCart(prev => [...prev, product]);
+            toast.success(`${product.name} added to cart`);
+        }
     };
 
     return (
