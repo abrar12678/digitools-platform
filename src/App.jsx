@@ -28,7 +28,7 @@ function App() {
       <Steps />
       <Membership />
       <Workflow />
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
