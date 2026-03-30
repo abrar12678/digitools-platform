@@ -9,22 +9,28 @@ import Steps from './components/Steps/Steps'
 import Tools from './components/Tools/Tools'
 import Workflow from './components/Workflow/Workflow'
 
-// const fetchProducts = async () => {
-//   const res = await fetch("/data.json");
-//   return res.json();
-// };
+const fetchProducts = async () => {
+  const res = await fetch("/data.json");
+  return res.json();
+};
 
 function App() {
-  // const productsPromise = fetchProducts();
+  const productsPromise = fetchProducts();
 
   return (
     <>
       <Navbar />
       <Hero />
       <Rating />
-      {/* <Suspense> */}
-        {/* <Tools productsPromise={productsPromise} /> */}
-      {/* </Suspense> */}
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center py-20">
+            <span className="loading loading-infinity loading-xl"></span>
+          </div>
+        }
+      >
+        <Tools productsPromise={productsPromise} />
+      </Suspense>
       <Steps />
       <Membership />
       <Workflow />
