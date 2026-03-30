@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* <Hero /> */}
+      <Hero />
       {/* <Rating /> */}
       {/* <Suspense> */}
         {/* <Tools productsPromise={productsPromise} /> */}
