@@ -21,7 +21,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      {/* <Rating /> */}
+      <Rating />
       {/* <Suspense> */}
         {/* <Tools productsPromise={productsPromise} /> */}
       {/* </Suspense> */}
