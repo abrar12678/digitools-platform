@@ -25,7 +25,7 @@ function App() {
       {/* <Suspense> */}
         {/* <Tools productsPromise={productsPromise} /> */}
       {/* </Suspense> */}
-      {/* <Steps /> */}
+      <Steps />
       {/* <Membership /> */}
       {/* <Workflow /> */}
       {/* <Footer /> */}
