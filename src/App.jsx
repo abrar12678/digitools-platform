@@ -27,7 +27,7 @@ function App() {
       {/* </Suspense> */}
       <Steps />
       <Membership />
-      {/* <Workflow /> */}
+      <Workflow />
       {/* <Footer /> */}
     </>
   )
