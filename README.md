@@ -7,7 +7,7 @@ You can test it live: [https://abrar-digitools-platform.netlify.app](https://abr
 
 ## 📷 Screenshots
 
-![App Screenshot](Website Demo Picture.png)
+![App Screenshot](screenshot.png)
 
 ---
 
